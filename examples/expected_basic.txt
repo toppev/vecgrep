@@ -1,0 +1,8 @@
+2025-08-09T12:00:06Z INFO user login success
+2025-08-09T12:00:07Z ERROR error: database connection error due to auth	[0.678]
+2025-08-09T12:00:08Z INFO request handled
+--
+2025-08-09T12:00:19Z INFO server healthy
+2025-08-09T12:00:20Z ERROR could not connect to database: connection refused	[0.629]
+2025-08-09T12:00:21Z INFO done
+--

@@ -1,0 +1,22 @@
+2025-08-09T12:00:00Z INFO server started
+2025-08-09T12:00:01Z INFO health check ok
+2025-08-09T12:00:02Z ERROR database failed to connect (timeout)
+2025-08-09T12:00:03Z WARN retrying connection to db
+2025-08-09T12:00:04Z ERROR db connection refused by peer
+2025-08-09T12:00:05Z INFO connected to database
+2025-08-09T12:00:06Z INFO user login success
+2025-08-09T12:00:07Z ERROR error: database connection error due to auth
+2025-08-09T12:00:08Z INFO request handled
+2025-08-09T12:00:09Z INFO cache warmed
+2025-08-09T12:00:10Z WARN disk usage at 80%
+2025-08-09T12:00:11Z INFO metrics flushed
+2025-08-09T12:00:12Z ERROR cannot reach postgres: auth failed
+2025-08-09T12:00:13Z INFO queue length=5
+2025-08-09T12:00:14Z ERROR db login denied (invalid password)
+2025-08-09T12:00:15Z INFO request handled
+2025-08-09T12:00:16Z WARN slow query detected
+2025-08-09T12:00:17Z INFO session created
+2025-08-09T12:00:18Z ERROR database connect timeout after 5s
+2025-08-09T12:00:19Z INFO server healthy
+2025-08-09T12:00:20Z ERROR could not connect to database: connection refused
+2025-08-09T12:00:21Z INFO done

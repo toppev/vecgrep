@@ -1,0 +1,16 @@
+[package]
+name = "vecgrep"
+version = "0.1.0"
+edition = "2021"
+description = "Semantic grep powered by model2vec-rs"
+license = "MIT"
+repository = "https://github.com/toppev/vecgrep"
+
+[dependencies]
+anyhow = "1"
+clap = { version = "4", features = ["derive", "env"] }
+rayon = "1"
+
+# Use the Rust library directly from GitHub for freshest features
+# If a crates.io version is preferred later, switch to that for reproducibility
+model2vec-rs = { git = "https://github.com/MinishLab/model2vec-rs" }
