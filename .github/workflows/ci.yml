@@ -1,0 +1,33 @@
+name: ci
+
+on:
+  push:
+    branches: [ main ]
+  pull_request:
+
+jobs:
+  build-and-test:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: dtolnay/rust-toolchain@stable
+        with:
+          components: clippy, rustfmt
+      - name: Generate lockfile
+        run: cargo generate-lockfile
+      - name: Build
+        run: cargo build --locked --all-targets
+      - name: Clippy
+        run: cargo clippy -- -D warnings
+      - name: Format
+        run: cargo fmt --all -- --check
+      - name: End-to-end smoke test
+        run: |
+          set -euo pipefail
+          # Build release binary
+          cargo build --release
+          BIN=./target/release/vecgrep
+          # Show help
+          $BIN -h >/dev/null
+          # compare stdout against committed expected example if present
+          diff -u examples/expected_basic.txt <(cat examples/logs.txt | $BIN -A1 -B1 -t 0.6 "database connection error")
